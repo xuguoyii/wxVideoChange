@@ -1,0 +1,28 @@
+/**index.wxss**/
+.scroll-fullpage{
+  height: 100vh;
+  position: relative;
+}
+.section{
+  height: 100vh;
+  background-size: 100% 100%;
+  position: relative;
+}
+.section image{
+  width: 100%;
+  height: 100vh;
+}
+.scroll{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.videoDetail{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.myVideo{
+  width: 100%;
+  height: 100vh;
+}

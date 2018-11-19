@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="scroll-fullpage">
+    <view class="scroll" animation="{{scrollStart}}">
+      <view wx:key="key" wx:for="{{videoData}}" class="section" style="">
+        <image src="{{item.image}}"></image>
+      </view>
+    </view>
+    <view class="videoDetail" style="">
+      <video id="myVideo"  style="transform:translateY(-{{scrollTop*100}}%)"  autoplay class="myVideo" objectFit="cover" src="{{videoSrc}}" controls direction='0'/>
+      <!--可操作的图标部分，可根据需求设置图标和功能-->
+      <cover-view class="iconContain">
+        <cover-image/>
+        <cover-view></cover-view>
+        <cover-image/>
+        <cover-view></cover-view>
+      </cover-view>
+    </view>
+  </view>
+  <!--因为我右侧有需要操作的图标，所以我款低没有设置100%，留下了右侧操作位置-->
+  <canvas disable-scroll="true" style="width: 85%;height:100%;position:absolute;top:0;z-index: 999"  bindtouchstart="onTouchStart" bindtouchend="onTouchEnd" canvas-id="videoCover" />
+</view>
